@@ -27,7 +27,7 @@ export default async function handler(req, res) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer re_9sUvRZQ5_5p6XdVtfFMRCZ3LjxRxhWZnr` // User's Resend Key
+                'Authorization': `Bearer ${process.env.RESEND_API_KEY}`
             },
             body: JSON.stringify({
                 from: 'Portfolio Contact <onboarding@resend.dev>',
