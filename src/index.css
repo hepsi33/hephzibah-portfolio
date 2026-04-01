@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #05010d;
+  --bg-gradient: radial-gradient(ellipse at top, #1c0a3d 0%, #0a0218 50%, #05010d 100%);
+  --text-main: #ffffff;
+  --text-muted: #a09eb5;
+  --accent-glow: #9d4edd;
+  --accent-light: #e0aaff;
+  --accent-deep: #5a189a;
+
+  --card-bg: rgba(15, 8, 35, 0.55);
+  --card-border: rgba(157, 78, 221, 0.25);
+  --card-glow: rgba(157, 78, 221, 0.15);
+
+  --navbar-bg: rgba(5, 1, 13, 0.85);
+  --navbar-border: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --bg-gradient: none;
+  --text-main: #0f0a1a;
+  --text-muted: #5a4d7a;
+  --accent-glow: #7b2fbe;
+  --accent-light: #7b2fbe;
+  --accent-deep: #4a1080;
+
+  --card-bg: rgba(248, 245, 255, 0.9);
+  --card-border: rgba(123, 47, 190, 0.2);
+  --card-glow: rgba(123, 47, 190, 0.1);
+
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --navbar-border: rgba(123, 47, 190, 0.12);
+}
+
+[data-theme="light"] body {
+  background: #f8f5ff;
+  color: #3b1f6e;
+}
+
+[data-theme="light"] .canvas-container {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Light theme — make all text purple */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: #3b1f6e !important;
+  -webkit-text-fill-color: #3b1f6e !important;
+}
+
+[data-theme="light"] p,
+[data-theme="light"] li,
+[data-theme="light"] span:not(.keep-color),
+[data-theme="light"] a {
+  color: #5a3d8a;
+}
+
+[data-theme="light"] strong {
+  color: #3b1f6e;
+}
+
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 24px rgba(123, 47, 190, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  overflow-x: hidden;
+  max-width: 100vw;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-glow), var(--accent-deep));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-light);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+/* ─── Glassmorphism Cards ─────────────────────────────── */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 28px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(224, 170, 255, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.glass-card:hover {
+  border-color: rgba(157, 78, 221, 0.5);
+  box-shadow:
+    0 0 30px var(--card-glow),
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transform: translateY(-6px);
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+/* ─── Layout Utilities ────────────────────────────────── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 60px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fff 20%, var(--accent-light) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-glow), transparent);
+  margin: 12px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* ─── App Structure ───────────────────────────────────── */
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* 3D Canvas Container */
+.canvas-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  /* Let clicks pass through to sections below */
+}
+
+/* Two-column layout */
+.content-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: -50px;
+}
+
+/* ─── Depth layer overlays ────────────────────────────── */
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(90, 24, 154, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(157, 78, 221, 0.06) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Section entrance animations ─────────────────────── */
+.section {
+  opacity: 1;
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+@media (max-width: 992px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static !important;
+    height: auto !important;
+    margin-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 12vw, 5rem) !important;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .glass-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
