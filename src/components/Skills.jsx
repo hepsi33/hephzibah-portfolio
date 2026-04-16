@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const skills = [
   { category: "Languages & Frameworks", items: ["Python", "Java", "C/C++", "C#", "VB.NET", "HTML & CSS", "JavaScript", "R Programming", "PHP", "React", "Next.js", "Expo Router", "Angular JS", "Android SDK", "LangChain"] },
-  { category: "Tools", items: ["Git", "GitHub", "Linux", "Vercel", "WordPress", "Microsoft Office", "APIs", "LLMs", "RAG"] },
+  { category: "Tools", items: ["Git", "GitHub", "Linux", "Vercel", "WordPress", "Microsoft Office", "APIs", "LLMs", "RAG", "WebAuthn", "Web Crypto API"] },
   { category: "Databases", items: ["PostgreSQL", "MongoDB", "SQL", "Supabase", "Convex"] },
   { category: "Soft Skills", items: ["Leadership", "Problem Solving", "Detail Oriented", "Teamwork", "Communication"] }
 ];

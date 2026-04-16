@@ -40,6 +40,7 @@
 
 ## 💼 Featured Projects Link
 - **AI RAG Web App:** Next.js Dashboard w/ AI Summaries
+- **StealthTab:** Advanced Private Tab Cloaking & Encryption
 - **NHAPP:** Real-Time React Native Messaging Clone
 - **Robot CLI:** AI-Powered Windows CLI System
 - **File Organizer:** Multithreaded Python Desktop Tool

@@ -10,6 +10,12 @@ const projects = [
         githubUrl: "https://github.com/hepsi33/Role-based-Dashboard"
     },
     {
+        title: "StealthTab — Advanced Private Tab Cloaking",
+        tech: "Manifest V3, Web Crypto API, WebAuthn",
+        desc: "Security-hardened browser extension that instantly cloaks sensitive tabs behind harmless decoy origins using AES-256-GCM encryption and biometric authentication.",
+        githubUrl: "https://github.com/hepsi33/stealthtab"
+    },
+    {
         title: "NHAPP - Whatsapp Clone",
         tech: "React Native (Expo), Convex",
         desc: "Real-time messaging mobile app with email-OTP authentication, multimedia chat, voice notes, status updates with viewer tracking, and group messaging.",
