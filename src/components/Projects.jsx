@@ -4,16 +4,22 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
     {
-        title: "AI RAG Web App",
-        tech: "Next.js, TypeScript, PostgreSQL",
-        desc: "A Full Stack Dashboard with secure role-based access, AI-Powered Youtube Summaries and RAG Workspace Chat handling documents, URLs, and images.",
-        githubUrl: "https://github.com/hepsi33/Role-based-Dashboard"
+        title: "Cortex — AI Study Partner",
+        tech: "Next.js 16, PostgreSQL, Gemini, Groq, Tailwind 4",
+        desc: "A premium AI Study Partner featuring Neural Focus Mode, RAG Knowledge Repositories (PDF, YouTube, Web), and automated AI quiz generation for elite learners.",
+        githubUrl: "https://github.com/hepsi33/Cortex"
     },
     {
         title: "StealthTab — Advanced Private Tab Cloaking",
         tech: "Manifest V3, Web Crypto API, WebAuthn",
         desc: "Security-hardened browser extension that instantly cloaks sensitive tabs behind harmless decoy origins using AES-256-GCM encryption and biometric authentication.",
         githubUrl: "https://github.com/hepsi33/stealthtab"
+    },
+    {
+        title: "AI RAG Web App",
+        tech: "Next.js, TypeScript, PostgreSQL",
+        desc: "A Full Stack Dashboard with secure role-based access, AI-Powered Youtube Summaries and RAG Workspace Chat handling documents, URLs, and images.",
+        githubUrl: "https://github.com/hepsi33/Role-based-Dashboard"
     },
     {
         title: "NHAPP - Whatsapp Clone",
